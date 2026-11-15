@@ -1,0 +1,13 @@
+# Quantum Channel Coherentization
+
+Question: ordinary uses of an unknown unital quantum channel versus a coherent Liouville operator for spectral algorithms.
+
+Story: README.md -> science/interpretation.md -> science/examples.md.
+Exact assumptions and normalization: science/model.md.
+Upper proof: science/collision-compiler.md; complete-unitary block output: science/block-encoding.md.
+Lower proof: science/dimension-lower-bound.md. Its robust inversion reduction uses one forward compiled block and no compiler inverse.
+Implementation: science/resources.md. Count channel calls, known gates, phase synthesis, disposable program and work qubits separately.
+Prior work: references/RELATED_WORK.md and references/references.bib.
+Reproduction: verification/README.md, verification/verify.py, verification/report.json.
+
+Essential distinctions: ordinary channel is the input; dilation/inverse/control are not supplied. All diamond norms are unhalved. The output target has no hidden dimension normalization; its exact designated block is Herm(L)/pi. Quadratic dimension order is matched at fixed precision, not a joint d-squared-over-error lower law. The ideal block ancilla count is constant; physical workspace is logarithmic in dimension. No application-level speedup is claimed.
