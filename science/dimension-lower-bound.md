@@ -36,7 +36,7 @@ For a deterministic ordinary-query algorithm $`\mathcal R`$ that makes at most $
 
 ```math
 \mathbb E_{U\sim\mathrm{Haar}}
-F_{\mathrm{ch}}(\mathcal R_U,\operatorname{Ad}_{U^{\dagger}})
+F_{\mathrm{ch}}(\mathcal R_U,\mathrm{Ad}_{U^{\dagger}})
 \le\frac{q+1}{d^2}.
 ```
 
@@ -49,10 +49,10 @@ We use this fidelity bound directly. This matters when extracting an inverse fro
 Suppose a $`q`$-query compiler produces $`\widetilde{\mathcal V}_{\mathcal E}`$ satisfying
 
 ```math
-\left\|
+\left\Vert
 \widetilde{\mathcal V}_{\mathcal E}
--\operatorname{Ad}_{e^{-i(\pi/2)\mathsf H_{\mathcal E}}}
-\right\|_{\diamond}\le\delta
+-\mathrm{Ad}_{e^{-i(\pi/2)\mathsf H_{\mathcal E}}}
+\right\Vert_{\diamond}\le\delta
 ```
 
 for every unital $`\mathcal E`$. On the unitary family,
@@ -70,14 +70,14 @@ Prepare the dilation flag in $`|0\rangle`$, place an arbitrary target state in t
 \otimes U^{\mathsf T}|0\rangle.
 ```
 
-Discarding the flag and the second register therefore implements $`\operatorname{Ad}_{U^{\dagger}}`$. The same statement holds with a target reference system: the discarded output is independent of the target and its reference. Diamond distance is contractive under this initialization and discarding, so the actual inverse channel has error at most $`\delta`$.
+Discarding the flag and the second register therefore implements $`\mathrm{Ad}_{U^{\dagger}}`$. The same statement holds with a target reference system: the discarded output is independent of the target and its reference. Diamond distance is contractive under this initialization and discarding, so the actual inverse channel has error at most $`\delta`$.
 
 If a channel $`\mathcal R_U`$ has diamond distance at most $`\delta`$ from the desired unitary, its normalized Choi state $`\rho_U`$ satisfies
 
 ```math
-1-F_{\mathrm{ch}}(\mathcal R_U,\operatorname{Ad}_{U^{\dagger}})
-\le\frac12\left\|\rho_U-
-|u^{-1}\rangle\langle u^{-1}|\right\|_1
+1-F_{\mathrm{ch}}(\mathcal R_U,\mathrm{Ad}_{U^{\dagger}})
+\le\frac12\left\Vert\rho_U-
+|u^{-1}\rangle\langle u^{-1}|\right\Vert_1
 \le\frac\delta2.
 ```
 
@@ -91,7 +91,7 @@ Thus constant-time, constant-error coherent evolution of the unnormalized Hermit
 
 ## A constant-normalization block is already sufficient
 
-The same conclusion holds for the block-encoding output used by spectral algorithms. Fix a known constant $`0<c\le1`$. For each unital channel let $`W_{\mathcal E}`$ be any unitary whose designated ancilla block is exactly
+The same conclusion holds for the block-encoding output used by spectral algorithms. Fix a known constant $`0\lt c\le1`$. For each unital channel let $`W_{\mathcal E}`$ be any unitary whose designated ancilla block is exactly
 
 ```math
 (\langle0^a|\otimes I)W_{\mathcal E}(|0^a\rangle\otimes I)
@@ -101,8 +101,8 @@ The same conclusion holds for the block-encoding output used by spectral algorit
 The unspecified blocks of $`W_{\mathcal E}`$ may depend on the channel. Suppose an ordinary-query compiler produces $`\widetilde{\mathcal W}_{\mathcal E}`$ such that
 
 ```math
-\left\|\widetilde{\mathcal W}_{\mathcal E}
--\operatorname{Ad}_{W_{\mathcal E}}\right\|_{\diamond}\le\delta.
+\left\Vert\widetilde{\mathcal W}_{\mathcal E}
+-\mathrm{Ad}_{W_{\mathcal E}}\right\Vert_{\diamond}\le\delta.
 ```
 
 Apply this output channel once, initializing its block ancilla in $`|0^a\rangle`$ and the remaining registers as in the previous construction. Measure whether the block ancilla returns to $`0^a`$. In the ideal channel this outcome has probability exactly $`c^2`$, independent of the target, because $`\mathsf H_U`$ is unitary. On this outcome the first data register is the desired $`U^{\dagger}`$ output. On failure discard the data and prepare an arbitrary fixed state. This completes the protocol to a deterministic channel without any further oracle call.
@@ -111,14 +111,14 @@ For the ideal block unitary, the completed inverse channel has the form
 
 ```math
 \mathcal R_U^{\mathrm{ideal}}
-=c^2\operatorname{Ad}_{U^{\dagger}}
+=c^2\mathrm{Ad}_{U^{\dagger}}
 +(1-c^2)\mathcal F_U
 ```
 
 for some channel $`\mathcal F_U`$. Its channel fidelity with the desired inverse is at least $`c^2`$, since the contribution of the failure channel is nonnegative. The identical completion applied to the actual output channel stays within $`\delta`$ of this ideal completion. Testing the ideal inverse Choi projector therefore gives
 
 ```math
-F_{\mathrm{ch}}(\mathcal R_U,\operatorname{Ad}_{U^{\dagger}})
+F_{\mathrm{ch}}(\mathcal R_U,\mathrm{Ad}_{U^{\dagger}})
 \ge c^2-\frac\delta2.
 ```
 

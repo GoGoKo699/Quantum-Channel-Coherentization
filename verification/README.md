@@ -1,5 +1,17 @@
 # Finite verification
 
+The numerical checks below concern finite algebraic consistency. The separate
+[hosted mathematics workflow](../.github/workflows/hosted-math.yml) visits every
+tracked Markdown page at its exact pull-request head revision, using a fresh
+anonymous Chromium context at widths 1440 and 760. Its
+[collector](hosted-tools/capture_hosted_math.cjs) and
+[text checker](hosted-tools/check_rendered_math.py) compare complete source and
+hosted MathML, counts, relations and bounded display geometry. Reports, HTML and
+screenshots are retained as temporary workflow artifacts. A structural pass
+still requires visual inspection and does not certify the scientific proofs.
+The job has only `contents: read`, persists no checkout credentials, and uses
+neither repository secrets nor account or certificate-setting changes.
+
 Run from the repository root:
 
 ```bash

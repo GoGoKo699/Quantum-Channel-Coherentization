@@ -9,15 +9,15 @@ The construction below implements the full target from [the model](model.md), wi
 Let $`\mathcal E`$ be any unital channel on a $`d`$-dimensional system, and let $`m\ge1`$ be an integer. For every real $`t`$, there is a circuit using exactly $`2m`$ ordinary calls to $`\mathcal E`$ whose output channel $`\widetilde{\mathcal U}_{\mathcal E,t}^{(m)}`$ satisfies
 
 ```math
-\left\|
+\left\Vert
 \widetilde{\mathcal U}_{\mathcal E,t}^{(m)}
--\operatorname{Ad}_{e^{-it\mathsf H(L_{\mathcal E})}}
-\right\|_\diamond
+-\mathrm{Ad}_{e^{-it\mathsf H(L_{\mathcal E})}}
+\right\Vert_\diamond
 \le
 \min\!\left\{2,\frac{(4d^2+2)t^2}{m}\right\}.
 ```
 
-Here $`\operatorname{Ad}_W(X)=WXW^\dagger`$. The known gates in this theorem are exact. For $`t\ne0`$ and $`0<\epsilon<2`$, the choice
+Here $`\mathrm{Ad}_W(X)=WXW^\dagger`$. The known gates in this theorem are exact. For $`t\ne0`$ and $`0<\epsilon<2`$, the choice
 
 ```math
 m=\left\lceil\frac{(4d^2+2)t^2}{\epsilon}\right\rceil
@@ -46,13 +46,13 @@ The partial-trace expressions agree with sandwiching $`V`$ or $`V^2`$ by $`\rho^
 =\mathrm{Tr}_{\mathrm{prog}}
 \left[e^{-ihV}(\rho\otimes X)e^{ihV}\right],
 \qquad
-v=\|M-K^2\|_\infty.
+v=\Vert M-K^2\Vert_\infty.
 ```
 
 For every real $`h`$,
 
 ```math
-\|\mathcal C_{\rho,h}-\operatorname{Ad}_{e^{-ihK}}\|_\diamond
+\Vert\mathcal C_{\rho,h}-\mathrm{Ad}_{e^{-ihK}}\Vert_\diamond
 \le2h^2v.
 ```
 
@@ -63,7 +63,7 @@ W^\dagger VW=K,
 \qquad
 W^\dagger V^2W=M,
 \qquad
-\|QVW\|_\infty^2=v.
+\Vert QVW\Vert_\infty^2=v.
 ```
 
 It is enough to take $`h\ge0`$; changing $`V`$ to $`-V`$ handles negative time. Put
@@ -79,7 +79,7 @@ The projected Schrödinger equations and variation of constants give
 ```math
 B_s=-i\int_0^s e^{-i(s-r)QVQ}QVWA_r\,dr,
 \qquad
-\|B_s\|_\infty\le s\sqrt v,
+\Vert B_s\Vert_\infty\le s\sqrt v,
 ```
 
 because $`A_r`$ is a compression of a unitary and is a contraction. The equation for $`A_s`$ then gives
@@ -88,7 +88,7 @@ because $`A_r`$ is a compression of a unitary and is a contraction. The equation
 A_h-e^{-ihK}
 =-i\int_0^h e^{-i(h-r)K}W^\dagger VQB_r\,dr,
 \qquad
-\|A_h-e^{-ihK}\|_\infty\le\frac{h^2v}{2}.
+\Vert A_h-e^{-ihK}\Vert_\infty\le\frac{h^2v}{2}.
 ```
 
 In a basis of the enlarged environment beginning with $`|s\rangle`$, tracing out that environment removes the cross terms between $`P`$ and $`Q`$. Thus
@@ -99,7 +99,7 @@ In a basis of the enlarged environment beginning with $`|s\rangle`$, tracing out
 \mathcal B_h(X)=\mathrm{Tr}_{\mathrm{env}}[B_hXB_h^\dagger].
 ```
 
-The leakage map $`\mathcal B_h`$ is completely positive, so $`\|\mathcal B_h\|_\diamond=\|B_h^\dagger B_h\|_\infty\le h^2v`$. The compressed term differs from $`\operatorname{Ad}_{e^{-ihK}}`$ by at most $`(\|A_h\|_\infty+1)\|A_h-e^{-ihK}\|_\infty\le h^2v`$ in diamond norm. These product bounds remain valid after adjoining an arbitrary reference. Adding the two contributions proves the lemma for all real $`h`$.
+The leakage map $`\mathcal B_h`$ is completely positive, so $`\Vert\mathcal B_h\Vert_\diamond=\Vert B_h^\dagger B_h\Vert_\infty\le h^2v`$. The compressed term differs from $`\mathrm{Ad}_{e^{-ihK}}`$ by at most $`(\Vert A_h\Vert_\infty+1)\Vert A_h-e^{-ihK}\Vert_\infty\le h^2v`$ in diamond norm. These product bounds remain valid after adjoining an arbitrary reference. Adding the two contributions proves the lemma for all real $`h`$.
 
 ## Programs and their first moments
 
@@ -184,17 +184,17 @@ M_\pm
 =I_{A'B'}.
 ```
 
-It follows that $`v_\pm=\|I-K_\pm^2\|_\infty\le1`$. The inherited variance lemma now gives the uniform local guarantee
+It follows that $`v_\pm=\Vert I-K_\pm^2\Vert_\infty\le1`$. The inherited variance lemma now gives the uniform local guarantee
 
 ```math
-\|\mathcal C_{\rho_\pm,h}
--\operatorname{Ad}_{e^{-ihK_\pm}}\|_\diamond
+\Vert\mathcal C_{\rho_\pm,h}
+-\mathrm{Ad}_{e^{-ihK_\pm}}\Vert_\diamond
 \le2h^2
 ```
 
 for every real step $`h`$. Replacing this evaluated moment by a worst-case interaction bound would discard the flat-marginal information.
 
-For the product-formula constant, we also use $`\|K_\pm\|_\infty\le1/d`$. Here is a direct reason. For any bipartite state $`\rho_{AB}`$, the maps $`X\mapsto\mathrm{Tr}(X)I\pm X^T`$ are completely positive because their Choi matrices are $`I\pm F`$. Applying either map on $`A`$ to the positive matrix $`\rho^{T_{AB}}`$ proves
+For the product-formula constant, we also use $`\Vert K_\pm\Vert_\infty\le1/d`$. Here is a direct reason. For any bipartite state $`\rho_{AB}`$, the maps $`X\mapsto\mathrm{Tr}(X)I\pm X^T`$ are completely positive because their Choi matrices are $`I\pm F`$. Applying either map on $`A`$ to the positive matrix $`\rho^{T_{AB}}`$ proves
 
 ```math
 -I_A\otimes\rho_B^T
@@ -202,7 +202,7 @@ For the product-formula constant, we also use $`\|K_\pm\|_\infty\le1/d`$. Here i
 \preceq I_A\otimes\rho_B^T.
 ```
 
-Thus $`\|\rho^{T_B}\|_\infty\le\|\rho_B\|_\infty`$. Substituting $`\rho_B=I/d`$ gives the required bound for both programs.
+Thus $`\Vert\rho^{T_B}\Vert_\infty\le\Vert\rho_B\Vert_\infty`$. Substituting $`\rho_B=I/d`$ gives the required bound for both programs.
 
 ## Pairing, product formula, and total error
 
@@ -218,23 +218,23 @@ Its ideal product is the unitary channel of $`e^{ihK_-}e^{-ihK_+}`$. Channel com
 For Hermitian $`A,B`$, the first-order unitary product formula obeys
 
 ```math
-\|e^{-ihA}e^{-ihB}-e^{-ih(A+B)}\|_\infty
-\le\frac{h^2}{2}\|[A,B]\|_\infty.
+\Vert e^{-ihA}e^{-ihB}-e^{-ih(A+B)}\Vert_\infty
+\le\frac{h^2}{2}\Vert[A,B]\Vert_\infty.
 ```
 
 This follows by differentiating an interpolating product and integrating the commutator once more; the surrounding factors are unitary, so the estimate holds for all real $`h`$. Passing to channels multiplies this operator bound by at most $`2`$. With $`A=-K_-`$ and $`B=K_+`$,
 
 ```math
-\|[K_+,K_-]\|_\infty
-\le2\|K_+\|_\infty\|K_-\|_\infty
+\Vert[K_+,K_-]\Vert_\infty
+\le2\Vert K_+\Vert_\infty\Vert K_-\Vert_\infty
 \le2/d^2.
 ```
 
 Combining collision and product-formula errors gives
 
 ```math
-\left\|\mathcal P_h
--\operatorname{Ad}_{e^{-ih(K_+-K_-)}}\right\|_\diamond
+\left\Vert\mathcal P_h
+-\mathrm{Ad}_{e^{-ih(K_+-K_-)}}\right\Vert_\diamond
 \le(4+2/d^2)h^2.
 ```
 
@@ -242,20 +242,20 @@ Take $`h=dt/m`$, prepare fresh programs for every collision, and set
 
 ```math
 \widetilde{\mathcal U}_{\mathcal E,t}^{(m)}
-=\operatorname{Ad}_S\circ\mathcal P_{dt/m}^{\,m}
-\circ\operatorname{Ad}_S.
+=\mathrm{Ad}_S\circ\mathcal P_{dt/m}^{\,m}
+\circ\mathrm{Ad}_S.
 ```
 
 Telescoping the $`m`$ channel differences gives
 
 ```math
-\left\|\mathcal P_{dt/m}^{\,m}
--\operatorname{Ad}_{e^{-idt(K_+-K_-)}}\right\|_\diamond
+\left\Vert\mathcal P_{dt/m}^{\,m}
+-\mathrm{Ad}_{e^{-idt(K_+-K_-)}}\right\Vert_\diamond
 \le m(4+2/d^2)\frac{d^2t^2}{m^2}
 =\frac{(4d^2+2)t^2}{m}.
 ```
 
-The first-moment identity and $`S^2=I`$ turn the ideal channel after the two outer conjugations into $`\operatorname{Ad}_{e^{-it\mathsf H(L_{\mathcal E})}}`$. There are two fresh one-query programs per pair, proving the stated $`2m`$-query theorem.
+The first-moment identity and $`S^2=I`$ turn the ideal channel after the two outer conjugations into $`\mathrm{Ad}_{e^{-it\mathsf H(L_{\mathcal E})}}`$. There are two fresh one-query programs per pair, proving the stated $`2m`$-query theorem.
 
 ## Coherent control and negative time
 
