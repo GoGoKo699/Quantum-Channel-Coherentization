@@ -1,0 +1,1073 @@
+{
+  "passed": true,
+  "generated_at_utc": "2026-11-15T14:21:22.468528+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "seed": 20261115,
+    "absolute_residual_tolerance": 5e-11
+  },
+  "channel_cases": [
+    {
+      "label": "complex_random_unital_mixture",
+      "dimension": 2,
+      "kraus_count": 4,
+      "passed": true,
+      "residuals": {
+        "trace_preservation": 5.181143802683649e-16,
+        "choi_trace": 4.440892098500626e-16,
+        "plus_program_trace": 6.661338147750939e-16,
+        "minus_program_trace": 6.661338147750939e-16,
+        "plus_marginal_formula": 3.178674246047103e-16,
+        "minus_marginal_formula": 3.178674246047103e-16,
+        "partial_transpose_difference": 1.984644408719258e-16,
+        "controlled_swap_untwisting": 0.0,
+        "collision_hermiticity": 0.0,
+        "collision_cubic_identity": 0.0,
+        "known_control_pt_extension": 0.0,
+        "known_control_marginal_unchanged": 3.178674246047103e-16,
+        "known_control_second_moment": 1.7981296916503538e-15,
+        "inverse_target_is_adjoint": 1.9503400346770294e-17
+      },
+      "bounds": {
+        "nu_equals_norm_E_identity": 0.9999999999999998,
+        "lambda_equals_one_plus_nu_over_two": 0.9999999999999999,
+        "program_pt_norm_plus": 0.3810408542289505,
+        "program_pt_norm_minus": 0.3810408542289505,
+        "program_pt_bound_lambda_over_d": 0.49999999999999994,
+        "pt_bound_passed": true
+      },
+      "moments": [
+        {
+          "program": "plus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 1.271469698418841e-15,
+          "second_moment_norm": 0.9999999999999994,
+          "expected_second_moment_norm": 0.9999999999999999,
+          "program_variance_norm": 0.9964349555244817,
+          "program_variance_minimum_eigenvalue": 0.854807867408471
+        },
+        {
+          "program": "minus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 1.271469698418841e-15,
+          "second_moment_norm": 0.9999999999999994,
+          "expected_second_moment_norm": 0.9999999999999999,
+          "program_variance_norm": 0.9964349555244817,
+          "program_variance_minimum_eigenvalue": 0.854807867408471
+        }
+      ],
+      "full_collision_diagnostics": [
+        {
+          "program": "plus",
+          "step": -0.07,
+          "matrix_exponential_trigonometric_identity_residual": 1.539854142686858e-16,
+          "collision_choi_trace_residual": 3.3306690738754696e-16,
+          "normalized_choi_trace_norm_error": 0.009289322168801881,
+          "error_over_step_squared": 1.8957800344493632,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.009765062564139922,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "plus",
+          "step": 0.02,
+          "matrix_exponential_trigonometric_identity_residual": 7.910820804348435e-17,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.0007601669982437724,
+          "error_over_step_squared": 1.9004174956094309,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0007971479644195854,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "plus",
+          "step": 0.05,
+          "matrix_exponential_trigonometric_identity_residual": 1.5532678549936267e-16,
+          "collision_choi_trace_residual": 2.220446049250313e-16,
+          "normalized_choi_trace_norm_error": 0.0047456289139143045,
+          "error_over_step_squared": 1.8982515655657215,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.004982174777622409,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": -0.07,
+          "matrix_exponential_trigonometric_identity_residual": 1.539854142686858e-16,
+          "collision_choi_trace_residual": 3.3306690738754696e-16,
+          "normalized_choi_trace_norm_error": 0.009289322168801881,
+          "error_over_step_squared": 1.8957800344493632,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.009765062564139922,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": 0.02,
+          "matrix_exponential_trigonometric_identity_residual": 7.910820804348435e-17,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.0007601669982437724,
+          "error_over_step_squared": 1.9004174956094309,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0007971479644195854,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": 0.05,
+          "matrix_exponential_trigonometric_identity_residual": 1.5532678549936267e-16,
+          "collision_choi_trace_residual": 2.220446049250313e-16,
+          "normalized_choi_trace_norm_error": 0.0047456289139143045,
+          "error_over_step_squared": 1.8982515655657215,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.004982174777622409,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        }
+      ],
+      "paired_collision_diagnostic": {
+        "step": 0.04,
+        "chronology": "plus(h), then minus(-h)",
+        "normalized_choi_trace_norm_error": 0.006070486734416739,
+        "error_over_step_squared": 3.794054209010462,
+        "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.006449378999485163,
+        "diagnostic_below_analytic_threshold": true,
+        "scope": "Normalized Choi trace distance is not a diamond upper certificate."
+      }
+    },
+    {
+      "label": "nonunital_pure_reset_boundary",
+      "dimension": 2,
+      "kraus_count": 2,
+      "passed": true,
+      "residuals": {
+        "trace_preservation": 0.0,
+        "choi_trace": 0.0,
+        "plus_program_trace": 2.220446049250313e-16,
+        "minus_program_trace": 2.220446049250313e-16,
+        "plus_marginal_formula": 2.2887833992611187e-16,
+        "minus_marginal_formula": 2.2887833992611187e-16,
+        "partial_transpose_difference": 2.220446049250313e-16,
+        "controlled_swap_untwisting": 0.0,
+        "collision_hermiticity": 0.0,
+        "collision_cubic_identity": 0.0,
+        "known_control_pt_extension": 0.0,
+        "known_control_marginal_unchanged": 2.2887833992611187e-16,
+        "known_control_second_moment": 1.2947314098277875e-15,
+        "inverse_target_is_adjoint": 9.83342112585238e-18
+      },
+      "bounds": {
+        "nu_equals_norm_E_identity": 2.0,
+        "lambda_equals_one_plus_nu_over_two": 1.5,
+        "program_pt_norm_plus": 0.5617449009293667,
+        "program_pt_norm_minus": 0.5617449009293667,
+        "program_pt_bound_lambda_over_d": 0.75,
+        "pt_bound_passed": true
+      },
+      "moments": [
+        {
+          "program": "plus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 9.155133597044475e-16,
+          "second_moment_norm": 1.4999999999999996,
+          "expected_second_moment_norm": 1.5,
+          "program_variance_norm": 1.4999999999999996,
+          "program_variance_minimum_eigenvalue": 0.42761324714696064
+        },
+        {
+          "program": "minus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 9.155133597044475e-16,
+          "second_moment_norm": 1.4999999999999996,
+          "expected_second_moment_norm": 1.5,
+          "program_variance_norm": 1.4999999999999996,
+          "program_variance_minimum_eigenvalue": 0.42761324714696064
+        }
+      ],
+      "full_collision_diagnostics": [
+        {
+          "program": "plus",
+          "step": -0.07,
+          "matrix_exponential_trigonometric_identity_residual": 1.539854142686858e-16,
+          "collision_choi_trace_residual": 4.440892098500626e-16,
+          "normalized_choi_trace_norm_error": 0.009717254742425255,
+          "error_over_step_squared": 1.9831132127398476,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0147,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "plus",
+          "step": 0.02,
+          "matrix_exponential_trigonometric_identity_residual": 7.910820804348435e-17,
+          "collision_choi_trace_residual": 3.3306690738754696e-16,
+          "normalized_choi_trace_norm_error": 0.0007953136855423154,
+          "error_over_step_squared": 1.9882842138557884,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0011999999999999997,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "plus",
+          "step": 0.05,
+          "matrix_exponential_trigonometric_identity_residual": 1.5532678549936267e-16,
+          "collision_choi_trace_residual": 2.220446049250313e-16,
+          "normalized_choi_trace_norm_error": 0.004964672184371764,
+          "error_over_step_squared": 1.9858688737487054,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.007499999999999999,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": -0.07,
+          "matrix_exponential_trigonometric_identity_residual": 1.539854142686858e-16,
+          "collision_choi_trace_residual": 4.440892098500626e-16,
+          "normalized_choi_trace_norm_error": 0.009717254742425255,
+          "error_over_step_squared": 1.9831132127398476,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0147,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": 0.02,
+          "matrix_exponential_trigonometric_identity_residual": 7.910820804348435e-17,
+          "collision_choi_trace_residual": 3.3306690738754696e-16,
+          "normalized_choi_trace_norm_error": 0.0007953136855423154,
+          "error_over_step_squared": 1.9882842138557884,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0011999999999999997,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": 0.05,
+          "matrix_exponential_trigonometric_identity_residual": 1.5532678549936267e-16,
+          "collision_choi_trace_residual": 2.220446049250313e-16,
+          "normalized_choi_trace_norm_error": 0.004964672184371764,
+          "error_over_step_squared": 1.9858688737487054,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.007499999999999999,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        }
+      ],
+      "paired_collision_diagnostic": {
+        "step": 0.04,
+        "chronology": "plus(h), then minus(-h)",
+        "normalized_choi_trace_norm_error": 0.0063458158646507315,
+        "error_over_step_squared": 3.966134915406707,
+        "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.009799999999999998,
+        "diagnostic_below_analytic_threshold": true,
+        "scope": "Normalized Choi trace distance is not a diamond upper certificate."
+      }
+    },
+    {
+      "label": "complex_random_unital_mixture",
+      "dimension": 3,
+      "kraus_count": 4,
+      "passed": true,
+      "residuals": {
+        "trace_preservation": 3.432094146999765e-16,
+        "choi_trace": 0.0,
+        "plus_program_trace": 1.1102230246251565e-16,
+        "minus_program_trace": 1.1102230246251565e-16,
+        "plus_marginal_formula": 8.745915795665868e-17,
+        "minus_marginal_formula": 8.745915795665868e-17,
+        "partial_transpose_difference": 1.92644432045552e-16,
+        "controlled_swap_untwisting": 0.0,
+        "collision_hermiticity": 0.0,
+        "collision_cubic_identity": 0.0,
+        "known_control_pt_extension": 0.0,
+        "known_control_marginal_unchanged": 8.745915795665868e-17,
+        "inverse_target_is_adjoint": 2.354340754164685e-17
+      },
+      "bounds": {
+        "nu_equals_norm_E_identity": 1.0000000000000002,
+        "lambda_equals_one_plus_nu_over_two": 1.0,
+        "program_pt_norm_plus": 0.3020475450837446,
+        "program_pt_norm_minus": 0.3020475450837446,
+        "program_pt_bound_lambda_over_d": 0.3333333333333333,
+        "pt_bound_passed": true
+      },
+      "moments": [
+        {
+          "program": "plus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 8.6349947342413825e-16,
+          "second_moment_norm": 1.0,
+          "expected_second_moment_norm": 1.0,
+          "program_variance_norm": 0.9999999738020916,
+          "program_variance_minimum_eigenvalue": 0.908767280508883
+        },
+        {
+          "program": "minus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 8.6349947342413825e-16,
+          "second_moment_norm": 1.0,
+          "expected_second_moment_norm": 1.0,
+          "program_variance_norm": 0.9999999738020916,
+          "program_variance_minimum_eigenvalue": 0.908767280508883
+        }
+      ],
+      "full_collision_diagnostics": [
+        {
+          "program": "plus",
+          "step": -0.07,
+          "matrix_exponential_trigonometric_identity_residual": 2.7963774716663153e-16,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.00951829546896435,
+          "error_over_step_squared": 1.9425092793804792,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0097999997432605,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "plus",
+          "step": 0.02,
+          "matrix_exponential_trigonometric_identity_residual": 1.2798344214125533e-16,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.0007802522845102968,
+          "error_over_step_squared": 1.950630711275742,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0007999999790416733,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "plus",
+          "step": 0.05,
+          "matrix_exponential_trigonometric_identity_residual": 2.5536770547917346e-16,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.004867088709058238,
+          "error_over_step_squared": 1.9468354836232948,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.004999999869010459,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": -0.07,
+          "matrix_exponential_trigonometric_identity_residual": 2.7963774716663153e-16,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.00951829546896435,
+          "error_over_step_squared": 1.9425092793804792,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0097999997432605,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": 0.02,
+          "matrix_exponential_trigonometric_identity_residual": 1.2798344214125533e-16,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.0007802522845102968,
+          "error_over_step_squared": 1.950630711275742,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.0007999999790416733,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        },
+        {
+          "program": "minus",
+          "step": 0.05,
+          "matrix_exponential_trigonometric_identity_residual": 2.5536770547917346e-16,
+          "collision_choi_trace_residual": 0.0,
+          "normalized_choi_trace_norm_error": 0.004867088709058238,
+          "error_over_step_squared": 1.9468354836232948,
+          "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.004999999869010459,
+          "diagnostic_below_analytic_threshold": true,
+          "scope": "Normalized Choi trace distance is a lower bound on diamond distance, not an upper certificate."
+        }
+      ],
+      "paired_collision_diagnostic": {
+        "step": 0.04,
+        "chronology": "plus(h), then minus(-h)",
+        "normalized_choi_trace_norm_error": 0.006229440230289656,
+        "error_over_step_squared": 3.8934001439310353,
+        "analytic_diamond_upper_used_only_as_diagnostic_threshold": 0.006448176009026619,
+        "diagnostic_below_analytic_threshold": true,
+        "scope": "Normalized Choi trace distance is not a diamond upper certificate."
+      }
+    },
+    {
+      "label": "nonunital_pure_reset_boundary",
+      "dimension": 3,
+      "kraus_count": 3,
+      "passed": true,
+      "residuals": {
+        "trace_preservation": 0.0,
+        "choi_trace": 0.0,
+        "plus_program_trace": 2.220446049250313e-16,
+        "minus_program_trace": 2.220446049250313e-16,
+        "plus_marginal_formula": 1.1775693440128312e-16,
+        "minus_marginal_formula": 1.1775693440128312e-16,
+        "partial_transpose_difference": 1.3597399555105182e-16,
+        "controlled_swap_untwisting": 0.0,
+        "collision_hermiticity": 0.0,
+        "collision_cubic_identity": 0.0,
+        "known_control_pt_extension": 0.0,
+        "known_control_marginal_unchanged": 1.1775693440128312e-16,
+        "inverse_target_is_adjoint": 4.911926825386502e-18
+      },
+      "bounds": {
+        "nu_equals_norm_E_identity": 3.0,
+        "lambda_equals_one_plus_nu_over_two": 2.0,
+        "program_pt_norm_plus": 0.4135323840153359,
+        "program_pt_norm_minus": 0.4135323840153359,
+        "program_pt_bound_lambda_over_d": 0.6666666666666666,
+        "pt_bound_passed": true
+      },
+      "moments": [
+        {
+          "program": "plus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 1.1537776118301384e-15,
+          "second_moment_norm": 1.9999999999999996,
+          "expected_second_moment_norm": 2.0,
+          "program_variance_norm": 1.9999999999999991,
+          "program_variance_minimum_eigenvalue": 0.44226836310967976
+        },
+        {
+          "program": "minus",
+          "first_moment_pt_residual": 0.0,
+          "second_moment_formula_residual": 1.1537776118301384e-15,
+          "second_moment_norm": 1.9999999999999996,
+          "expected_second_moment_norm": 2.0,
+          "program_variance_norm": 1.9999999999999991,
+          "program_variance_minimum_eigenvalue": 0.44226836310967976
+        }
+      ],
+      "full_collision_diagnostics": [],
+      "paired_collision_diagnostic": null
+    },
+    {
+      "label": "complex_random_unital_mixture",
+      "dimension": 4,
+      "kraus_count": 4,
+      "passed": true,
+      "residuals": {
+        "trace_preservation": 4.2482533223400867e-16,
+        "choi_trace": 0.0,
+        "plus_program_trace": 3.3306690738754696e-16,
+        "minus_program_trace": 3.3306690738754696e-16,
+        "plus_marginal_formula": 1.4377414021904603e-16,
+        "minus_marginal_formula": 1.4377414021904603e-16,
+        "partial_transpose_difference": 1.7198615382298646e-16,
+        "controlled_swap_untwisting": 0.0,
+        "known_control_pt_extension": 0.0,
+        "known_control_marginal_unchanged": 1.4377414021904603e-16,
+        "inverse_target_is_adjoint": 2.6082716465806284e-17
+      },
+      "bounds": {
+        "nu_equals_norm_E_identity": 1.0,
+        "lambda_equals_one_plus_nu_over_two": 1.0,
+        "program_pt_norm_plus": 0.19719691253356672,
+        "program_pt_norm_minus": 0.19719691253356672,
+        "program_pt_bound_lambda_over_d": 0.25,
+        "pt_bound_passed": true
+      },
+      "moments": [],
+      "full_collision_diagnostics": [],
+      "paired_collision_diagnostic": null
+    }
+  ],
+  "unitary_inversion_extraction": [
+    {
+      "dimension": 2,
+      "passed": true,
+      "residuals": {
+        "unitarity_of_fixture": 1.8451102670681387e-16,
+        "program_derived_generator": 7.989065771871623e-16,
+        "hermitized_square_identity": 1.9374507793604245e-15,
+        "pi_over_two_exponential": 1.8188966583395206e-15,
+        "flag_zero_to_one_branch": 3.93822680128359e-16,
+        "wrong_flag_probability_zero": 1.1194026245978002e-15,
+        "extracted_vector": 1.4008361993460574e-16,
+        "inversion_channel_normalized_choi": 2.638202893070874e-16,
+        "extracted_isometry_return": 3.760618946063652e-16
+      },
+      "negative_controls": {
+        "complex_nonsymmetric_fixture": 2.517156076428058,
+        "distance_to_wrong_complex_conjugation_channel": 1.6234804383500314,
+        "distance_to_wrong_transpose_channel": 1.531008445065222
+      }
+    },
+    {
+      "dimension": 3,
+      "passed": true,
+      "residuals": {
+        "unitarity_of_fixture": 8.066793221618375e-16,
+        "program_derived_generator": 1.189193932752664e-15,
+        "hermitized_square_identity": 1.996240264714368e-15,
+        "pi_over_two_exponential": 2.401285737975716e-15,
+        "flag_zero_to_one_branch": 1.2982544608095893e-15,
+        "wrong_flag_probability_zero": 1.5203774956841675e-15,
+        "extracted_vector": 5.282147529299717e-16,
+        "inversion_channel_normalized_choi": 4.352485107956326e-16,
+        "extracted_isometry_return": 4.68023019350723e-16
+      },
+      "negative_controls": {
+        "complex_nonsymmetric_fixture": 2.3982102561098926,
+        "distance_to_wrong_complex_conjugation_channel": 1.9982827133230003,
+        "distance_to_wrong_transpose_channel": 1.9599647025579068
+      }
+    },
+    {
+      "dimension": 4,
+      "passed": true,
+      "residuals": {
+        "unitarity_of_fixture": 9.285195518329284e-16,
+        "program_derived_generator": 1.2752579138323002e-15,
+        "hermitized_square_identity": 2.816288816708342e-15,
+        "pi_over_two_exponential": 2.9122261403224993e-15,
+        "flag_zero_to_one_branch": 1.6628952735397149e-15,
+        "wrong_flag_probability_zero": 1.854872978307145e-15,
+        "extracted_vector": 6.239844986769368e-16,
+        "inversion_channel_normalized_choi": 4.2425551838823217e-16,
+        "extracted_isometry_return": 6.541681674233009e-16
+      },
+      "negative_controls": {
+        "complex_nonsymmetric_fixture": 1.6750965809542615,
+        "distance_to_wrong_complex_conjugation_channel": 1.5211391617827004,
+        "distance_to_wrong_transpose_channel": 1.8261373658403064
+      }
+    }
+  ],
+  "known_depolarizing_correction": [
+    {
+      "dimension": 2,
+      "known_depolarizing_probability": 0.2,
+      "simulation_time_amplification": 1.25,
+      "passed": true,
+      "residuals": {
+        "noisy_channel_trace_preservation": 1.9392713224434041e-16,
+        "noisy_channel_unitality": 1.9805652762168536e-16,
+        "choi_derived_generator_decomposition": 6.852075770377445e-16,
+        "bell_invariance_left": 2.0781536376675498e-16,
+        "bell_invariance_right": 1.7650858282703537e-16,
+        "known_correction_commutator": 1.4749271270702623e-16,
+        "corrected_matrix_exponential": 1.3037171231657981e-15,
+        "corrected_pi_over_two_identity": 1.7603076892741245e-15,
+        "wrong_flag_probability_zero": 1.021448330163389e-15,
+        "reference_entangled_purification_extraction": 2.711632273699854e-16,
+        "corrected_inversion_channel_normalized_choi": 3.3686242740564383e-16,
+        "corrected_isometry_return": 4.2648032976754534e-16
+      },
+      "scope": "Exact-model finite matrix identity only; no noisy-compiler query lower bound, calibration analysis or precision optimality is tested."
+    },
+    {
+      "dimension": 2,
+      "known_depolarizing_probability": 0.8,
+      "simulation_time_amplification": 5.000000000000001,
+      "passed": true,
+      "residuals": {
+        "noisy_channel_trace_preservation": 1.150932719595752e-16,
+        "noisy_channel_unitality": 1.1428905868259026e-16,
+        "choi_derived_generator_decomposition": 2.4656385271423875e-16,
+        "bell_invariance_left": 2.0781536376675498e-16,
+        "bell_invariance_right": 1.7650858282703537e-16,
+        "known_correction_commutator": 1.17509094763821e-16,
+        "corrected_matrix_exponential": 1.4268209377870624e-15,
+        "corrected_pi_over_two_identity": 1.4249021031087767e-15,
+        "wrong_flag_probability_zero": 8.277075086570178e-16,
+        "reference_entangled_purification_extraction": 2.5403836314119623e-16,
+        "corrected_inversion_channel_normalized_choi": 2.726770915901172e-16,
+        "corrected_isometry_return": 2.3402916092701173e-16
+      },
+      "scope": "Exact-model finite matrix identity only; no noisy-compiler query lower bound, calibration analysis or precision optimality is tested."
+    },
+    {
+      "dimension": 3,
+      "known_depolarizing_probability": 0.2,
+      "simulation_time_amplification": 1.25,
+      "passed": true,
+      "residuals": {
+        "noisy_channel_trace_preservation": 5.620892386420067e-16,
+        "noisy_channel_unitality": 6.402450929260201e-16,
+        "choi_derived_generator_decomposition": 1.7557566622813179e-15,
+        "bell_invariance_left": 4.3011134710705754e-16,
+        "bell_invariance_right": 4.807882189638258e-16,
+        "known_correction_commutator": 7.516250163138598e-16,
+        "corrected_matrix_exponential": 3.487320036200377e-15,
+        "corrected_pi_over_two_identity": 3.234849833811924e-15,
+        "wrong_flag_probability_zero": 1.8638669521994844e-15,
+        "reference_entangled_purification_extraction": 5.795589345097266e-16,
+        "corrected_inversion_channel_normalized_choi": 5.441795254189588e-16,
+        "corrected_isometry_return": 4.2408878446402594e-16
+      },
+      "scope": "Exact-model finite matrix identity only; no noisy-compiler query lower bound, calibration analysis or precision optimality is tested."
+    },
+    {
+      "dimension": 3,
+      "known_depolarizing_probability": 0.8,
+      "simulation_time_amplification": 5.000000000000001,
+      "passed": true,
+      "residuals": {
+        "noisy_channel_trace_preservation": 3.550203614415098e-16,
+        "noisy_channel_unitality": 3.4856503863950397e-16,
+        "choi_derived_generator_decomposition": 1.0822310643929499e-15,
+        "bell_invariance_left": 4.3011134710705754e-16,
+        "bell_invariance_right": 4.807882189638258e-16,
+        "known_correction_commutator": 2.0044063877404824e-16,
+        "corrected_matrix_exponential": 6.980525160501666e-15,
+        "corrected_pi_over_two_identity": 6.37889114956855e-15,
+        "wrong_flag_probability_zero": 4.360945196780324e-15,
+        "reference_entangled_purification_extraction": 6.032456820930117e-16,
+        "corrected_inversion_channel_normalized_choi": 4.918223302647016e-16,
+        "corrected_isometry_return": 7.853862316814368e-16
+      },
+      "scope": "Exact-model finite matrix identity only; no noisy-compiler query lower bound, calibration analysis or precision optimality is tested."
+    }
+  ],
+  "block_encoding_polynomial_and_completion": [
+    {
+      "dimension": 2,
+      "label": "complex_unitary_channel",
+      "passed": true,
+      "base_residuals": {
+        "h0_hermiticity": 8.885496252480259e-17,
+        "sine_unitary_hermiticity": 0.0,
+        "sine_unitary_square_identity": 5.416856621386041e-16,
+        "compressed_sine_matches_functional_calculus": 7.890221364084963e-16,
+        "inverse_sine_branch_identity": 8.308335801012086e-16
+      },
+      "polynomial_and_completion_cases": [
+        {
+          "m": 2,
+          "degree": 5,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 5.977825314234728e-16,
+            "polynomial_block_hermiticity": 1.7561275771772278e-16,
+            "a_b_commutator": 5.901733565316039e-17,
+            "julia_a_unitarity": 1.9105665008164206e-15,
+            "julia_b_unitarity": 3.193245337135227e-15,
+            "completed_a_unitarity": 2.4929459677603106e-15,
+            "completed_b_unitarity": 3.562691829254693e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 4.618701254788249e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.7904695506897469,
+            "global_grid_max_abs_polynomial": 0.7904695506897469,
+            "half_interval_grid_tail_error": 0.00026845763373156695,
+            "analytic_half_interval_tail_bound": 0.006631455962162306,
+            "actual_operator_block_error": 0.00019667644014527186,
+            "a_operator_norm": 0.31830988618379075,
+            "b_operator_norm": 0.3181132097436455,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 0.00020746028146078526,
+            "stable_completion_operator_bound": 0.00022710239132226007,
+            "normalized_choi_trace_norm_difference": 0.0003911908563890395,
+            "twice_operator_difference_bound": 0.0004149205629215705
+          }
+        },
+        {
+          "m": 5,
+          "degree": 11,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 5.628144612310166e-16,
+            "polynomial_block_hermiticity": 5.397938396114281e-17,
+            "a_b_commutator": 3.315412240238216e-17,
+            "julia_a_unitarity": 1.9105665008164206e-15,
+            "julia_b_unitarity": 3.654351550718136e-15,
+            "completed_a_unitarity": 2.620860189685169e-15,
+            "completed_b_unitarity": 4.222280156208265e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 1.6667490819596495e-18
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8524743816260038,
+            "global_grid_max_abs_polynomial": 0.8524743816260036,
+            "half_interval_grid_tail_error": 1.691054685115656e-06,
+            "analytic_half_interval_tail_bound": 0.00010361649940878603,
+            "actual_operator_block_error": 9.595257473398734e-07,
+            "a_operator_norm": 0.31830988618379075,
+            "b_operator_norm": 0.31830892665804345,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.0121719715154844e-06,
+            "stable_completion_operator_bound": 1.1079648970421056e-06,
+            "normalized_choi_trace_norm_difference": 1.9085697717805154e-06,
+            "twice_operator_difference_bound": 2.024343943030969e-06
+          }
+        },
+        {
+          "m": 9,
+          "degree": 19,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 5.366805940186533e-16,
+            "polynomial_block_hermiticity": 8.569341157045685e-17,
+            "a_b_commutator": 3.680101354212527e-17,
+            "julia_a_unitarity": 1.9105665008164206e-15,
+            "julia_b_unitarity": 5.818853948061101e-15,
+            "completed_a_unitarity": 2.9754080981822163e-15,
+            "completed_b_unitarity": 6.566883823018889e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 2.743963625541097e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8859803287055977,
+            "global_grid_max_abs_polynomial": 0.8859803287055978,
+            "half_interval_grid_tail_error": 3.259405800815074e-09,
+            "analytic_half_interval_tail_bound": 4.0475195081557044e-07,
+            "actual_operator_block_error": 1.3188543295229737e-09,
+            "a_operator_norm": 0.31830988618379075,
+            "b_operator_norm": 0.31830988486493633,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.3912175234298897e-09,
+            "stable_completion_operator_bound": 1.5228818043439849e-09,
+            "normalized_choi_trace_norm_difference": 2.6233021883973544e-09,
+            "twice_operator_difference_bound": 2.7824350468597794e-09
+          }
+        }
+      ],
+      "full_interval_grid_points": 20001,
+      "half_interval_grid_points": 10001,
+      "scope": "Polynomial and comparison-unitary diagnostics only. No QSVT phase synthesis/circuit execution or diamond-norm upper certification is performed."
+    },
+    {
+      "dimension": 2,
+      "label": "complex_random_unital_mixture",
+      "passed": true,
+      "base_residuals": {
+        "h0_hermiticity": 1.7164595754995374e-17,
+        "sine_unitary_hermiticity": 0.0,
+        "sine_unitary_square_identity": 6.157425897474109e-16,
+        "compressed_sine_matches_functional_calculus": 1.0412703419441282e-15,
+        "inverse_sine_branch_identity": 1.0651749063539886e-15
+      },
+      "polynomial_and_completion_cases": [
+        {
+          "m": 2,
+          "degree": 5,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 6.843477107222264e-16,
+            "polynomial_block_hermiticity": 1.7839148922070744e-16,
+            "a_b_commutator": 4.7845327044397384e-17,
+            "julia_a_unitarity": 4.504661358907231e-15,
+            "julia_b_unitarity": 4.587186042300972e-15,
+            "completed_a_unitarity": 5.144600060026734e-15,
+            "completed_b_unitarity": 5.413400606025714e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 7.968885967768458e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.7904695506897469,
+            "global_grid_max_abs_polynomial": 0.7904695506897469,
+            "half_interval_grid_tail_error": 0.00026845763373156695,
+            "analytic_half_interval_tail_bound": 0.006631455962162306,
+            "actual_operator_block_error": 0.0001966764401451938,
+            "a_operator_norm": 0.3183098861837905,
+            "b_operator_norm": 0.3181132097436453,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 0.00020746028146101977,
+            "stable_completion_operator_bound": 0.00022710239132216995,
+            "normalized_choi_trace_norm_difference": 0.00019572895038118526,
+            "twice_operator_difference_bound": 0.00041492056292203954
+          }
+        },
+        {
+          "m": 5,
+          "degree": 11,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 6.563961072679916e-16,
+            "polynomial_block_hermiticity": 9.988397864298018e-17,
+            "a_b_commutator": 1.9770775468068792e-17,
+            "julia_a_unitarity": 4.504661358907231e-15,
+            "julia_b_unitarity": 5.060973871401929e-15,
+            "completed_a_unitarity": 5.587368199393536e-15,
+            "completed_b_unitarity": 6.359850179549786e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 2.8715263944868036e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8524743816260038,
+            "global_grid_max_abs_polynomial": 0.8524743816260036,
+            "half_interval_grid_tail_error": 1.691054685115656e-06,
+            "analytic_half_interval_tail_bound": 0.00010361649940878603,
+            "actual_operator_block_error": 9.595257472605484e-07,
+            "a_operator_norm": 0.3183098861837905,
+            "b_operator_norm": 0.3183089266580434,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.0121719710217597e-06,
+            "stable_completion_operator_bound": 1.107964896950509e-06,
+            "normalized_choi_trace_norm_difference": 9.542875882056344e-07,
+            "twice_operator_difference_bound": 2.0243439420435195e-06
+          }
+        },
+        {
+          "m": 9,
+          "degree": 19,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 6.957481588887863e-16,
+            "polynomial_block_hermiticity": 1.2838568624312497e-16,
+            "a_b_commutator": 2.4309179555464783e-17,
+            "julia_a_unitarity": 4.504661358907231e-15,
+            "julia_b_unitarity": 3.0186805019804486e-15,
+            "completed_a_unitarity": 5.3547626237391184e-15,
+            "completed_b_unitarity": 3.815745611698712e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 3.231355461698444e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8859803287055977,
+            "global_grid_max_abs_polynomial": 0.8859803287055978,
+            "half_interval_grid_tail_error": 3.259405800815074e-09,
+            "analytic_half_interval_tail_bound": 4.0475195081557044e-07,
+            "actual_operator_block_error": 1.3188543063764038e-09,
+            "a_operator_norm": 0.3183098861837905,
+            "b_operator_norm": 0.3183098848649362,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.3912158914050415e-09,
+            "stable_completion_operator_bound": 1.522881777616628e-09,
+            "normalized_choi_trace_norm_difference": 1.3116508882497325e-09,
+            "twice_operator_difference_bound": 2.782431782810083e-09
+          }
+        }
+      ],
+      "full_interval_grid_points": 20001,
+      "half_interval_grid_points": 10001,
+      "scope": "Polynomial and comparison-unitary diagnostics only. No QSVT phase synthesis/circuit execution or diamond-norm upper certification is performed."
+    },
+    {
+      "dimension": 3,
+      "label": "complex_unitary_channel",
+      "passed": true,
+      "base_residuals": {
+        "h0_hermiticity": 7.325410165863543e-17,
+        "sine_unitary_hermiticity": 0.0,
+        "sine_unitary_square_identity": 7.763112789666652e-16,
+        "compressed_sine_matches_functional_calculus": 2.4182487185569565e-15,
+        "inverse_sine_branch_identity": 2.6047646828654498e-15
+      },
+      "polynomial_and_completion_cases": [
+        {
+          "m": 2,
+          "degree": 5,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 1.6625051748126516e-15,
+            "polynomial_block_hermiticity": 1.3385106457334897e-16,
+            "a_b_commutator": 9.04982697205537e-17,
+            "julia_a_unitarity": 7.972337519969473e-15,
+            "julia_b_unitarity": 7.87990309961102e-15,
+            "completed_a_unitarity": 8.6731166445888e-15,
+            "completed_b_unitarity": 8.479879692319947e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 2.2388774861825667e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.7904695506897469,
+            "global_grid_max_abs_polynomial": 0.7904695506897469,
+            "half_interval_grid_tail_error": 0.00026845763373156695,
+            "analytic_half_interval_tail_bound": 0.006631455962162306,
+            "actual_operator_block_error": 0.00019667644014529612,
+            "a_operator_norm": 0.31830988618379086,
+            "b_operator_norm": 0.31811320974364554,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 0.0002074602814616786,
+            "stable_completion_operator_bound": 0.0002271023913222881,
+            "normalized_choi_trace_norm_difference": 0.0004038540181819266,
+            "twice_operator_difference_bound": 0.0004149205629233572
+          }
+        },
+        {
+          "m": 5,
+          "degree": 11,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 1.644111662543341e-15,
+            "polynomial_block_hermiticity": 8.50452565134176e-17,
+            "a_b_commutator": 8.44012324538258e-17,
+            "julia_a_unitarity": 7.972337519969473e-15,
+            "julia_b_unitarity": 9.501330633526561e-15,
+            "completed_a_unitarity": 8.92541286437448e-15,
+            "completed_b_unitarity": 1.0350522144211849e-14,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 2.0691532593764862e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8524743816260038,
+            "global_grid_max_abs_polynomial": 0.8524743816260036,
+            "half_interval_grid_tail_error": 1.691054685115656e-06,
+            "analytic_half_interval_tail_bound": 0.00010361649940878603,
+            "actual_operator_block_error": 9.595257473711383e-07,
+            "a_operator_norm": 0.31830988618379086,
+            "b_operator_norm": 0.31830892665804345,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.0121719725765423e-06,
+            "stable_completion_operator_bound": 1.1079648970782072e-06,
+            "normalized_choi_trace_norm_difference": 1.9703517069530943e-06,
+            "twice_operator_difference_bound": 2.0243439451530846e-06
+          }
+        },
+        {
+          "m": 9,
+          "degree": 19,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 1.6856316470985807e-15,
+            "polynomial_block_hermiticity": 7.894118109876537e-17,
+            "a_b_commutator": 7.799394645687691e-17,
+            "julia_a_unitarity": 7.972337519969473e-15,
+            "julia_b_unitarity": 9.294548073205537e-15,
+            "completed_a_unitarity": 8.978457023238607e-15,
+            "completed_b_unitarity": 9.711640070584884e-15,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 1.7430551906582015e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8859803287055977,
+            "global_grid_max_abs_polynomial": 0.8859803287055978,
+            "half_interval_grid_tail_error": 3.259405800815074e-09,
+            "analytic_half_interval_tail_bound": 4.0475195081557044e-07,
+            "actual_operator_block_error": 1.3188544026104476e-09,
+            "a_operator_norm": 0.31830988618379086,
+            "b_operator_norm": 0.31830988486493644,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.3912178048046676e-09,
+            "stable_completion_operator_bound": 1.5228818887381301e-09,
+            "normalized_choi_trace_norm_difference": 2.7082206403521324e-09,
+            "twice_operator_difference_bound": 2.7824356096093353e-09
+          }
+        }
+      ],
+      "full_interval_grid_points": 20001,
+      "half_interval_grid_points": 10001,
+      "scope": "Polynomial and comparison-unitary diagnostics only. No QSVT phase synthesis/circuit execution or diamond-norm upper certification is performed."
+    },
+    {
+      "dimension": 3,
+      "label": "complex_random_unital_mixture",
+      "passed": true,
+      "base_residuals": {
+        "h0_hermiticity": 1.5074008853440216e-16,
+        "sine_unitary_hermiticity": 0.0,
+        "sine_unitary_square_identity": 1.0090425443157567e-15,
+        "compressed_sine_matches_functional_calculus": 2.1060115830576953e-15,
+        "inverse_sine_branch_identity": 2.057571299811786e-15
+      },
+      "polynomial_and_completion_cases": [
+        {
+          "m": 2,
+          "degree": 5,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 1.425958743679737e-15,
+            "polynomial_block_hermiticity": 1.8765156903295907e-16,
+            "a_b_commutator": 6.576653616902257e-17,
+            "julia_a_unitarity": 1.20401105441755e-14,
+            "julia_b_unitarity": 1.1108719773710285e-14,
+            "completed_a_unitarity": 1.2847879929002922e-14,
+            "completed_b_unitarity": 1.2050102839034739e-14,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 2.3879552848993235e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.7904695506897469,
+            "global_grid_max_abs_polynomial": 0.7904695506897469,
+            "half_interval_grid_tail_error": 0.00026845763373156695,
+            "analytic_half_interval_tail_bound": 0.006631455962162306,
+            "actual_operator_block_error": 0.00019667644014525107,
+            "a_operator_norm": 0.3183098861837906,
+            "b_operator_norm": 0.3181132097436453,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 0.00020746028146068193,
+            "stable_completion_operator_bound": 0.00022710239132223608,
+            "normalized_choi_trace_norm_difference": 0.00015654956697730093,
+            "twice_operator_difference_bound": 0.00041492056292136387
+          }
+        },
+        {
+          "m": 5,
+          "degree": 11,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 1.4124655577593138e-15,
+            "polynomial_block_hermiticity": 2.040384340431761e-16,
+            "a_b_commutator": 6.011867199741197e-17,
+            "julia_a_unitarity": 1.20401105441755e-14,
+            "julia_b_unitarity": 1.1547391221125528e-14,
+            "completed_a_unitarity": 1.2708691071468098e-14,
+            "completed_b_unitarity": 1.2108288653293157e-14,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 3.8386050861907196e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8524743816260038,
+            "global_grid_max_abs_polynomial": 0.8524743816260036,
+            "half_interval_grid_tail_error": 1.691054685115656e-06,
+            "analytic_half_interval_tail_bound": 0.00010361649940878603,
+            "actual_operator_block_error": 9.595257473016689e-07,
+            "a_operator_norm": 0.3183098861837906,
+            "b_operator_norm": 0.31830892665804333,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.0121719722686503e-06,
+            "stable_completion_operator_bound": 1.107964896997991e-06,
+            "normalized_choi_trace_norm_difference": 6.935006927455465e-07,
+            "twice_operator_difference_bound": 2.0243439445373005e-06
+          }
+        },
+        {
+          "m": 9,
+          "degree": 19,
+          "passed": true,
+          "residuals": {
+            "matrix_polynomial_matches_spectral_evaluation": 1.403464498075218e-15,
+            "polynomial_block_hermiticity": 1.7397952464915123e-16,
+            "a_b_commutator": 6.304482249787734e-17,
+            "julia_a_unitarity": 1.20401105441755e-14,
+            "julia_b_unitarity": 1.3755521861176788e-14,
+            "completed_a_unitarity": 1.2720255388311577e-14,
+            "completed_b_unitarity": 1.3920646428041368e-14,
+            "completed_exact_top_a": 0.0,
+            "completed_original_top_b": 0.0,
+            "unitary_basis_change_preserves_completion_norm": 5.0702014760127364e-17
+          },
+          "inequalities": {
+            "coefficient_sum": 0.8859803287055977,
+            "global_grid_max_abs_polynomial": 0.8859803287055978,
+            "half_interval_grid_tail_error": 3.259405800815074e-09,
+            "analytic_half_interval_tail_bound": 4.0475195081557044e-07,
+            "actual_operator_block_error": 1.318854359061278e-09,
+            "a_operator_norm": 0.3183098861837906,
+            "b_operator_norm": 0.31830988486493633,
+            "strict_contraction_bound_one_over_pi": 0.3183098861837907,
+            "completed_unitary_operator_difference": 1.391217815130888e-09,
+            "stable_completion_operator_bound": 1.5228818384518808e-09,
+            "normalized_choi_trace_norm_difference": 9.164664526399381e-10,
+            "twice_operator_difference_bound": 2.782435630261776e-09
+          }
+        }
+      ],
+      "full_interval_grid_points": 20001,
+      "half_interval_grid_points": 10001,
+      "scope": "Polynomial and comparison-unitary diagnostics only. No QSVT phase synthesis/circuit execution or diamond-norm upper certification is performed."
+    }
+  ],
+  "scope": [
+    "Finite floating-point diagnostics, not interval arithmetic or a proof certificate.",
+    "d=2,3 use explicit collision Hamiltonians; d=4 checks only program, marginal, PT, and extraction identities.",
+    "Full collision channels are reconstructed from scipy matrix exponentials and an explicit Kraus/environment trace.",
+    "Normalized Choi trace distance is NOT a diamond-norm upper bound; no diamond SDP or general theorem is numerically certified.",
+    "Complex nonsymmetric unitary fixtures distinguish adjoint inversion from transpose or complex conjugation.",
+    "No hosted rendering or hardware execution is included."
+  ]
+}
