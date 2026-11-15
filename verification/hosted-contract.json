@@ -30,6 +30,18 @@
       "index": 15,
       "source_sha256": "7fc1a2d1f4e9616998ee9741a3ad3c4cace752aa449e0613c875f0b8d4b1fc90",
       "expected_text": "Q(d)=Θ(d2)."
+    },
+    {
+      "path": "learning/WATROUS_BRIDGE.md",
+      "index": 11,
+      "source_sha256": "ad478d64f78d2d7c25a9ae14dbb047bf85bbfb132119703336cc4fb4f9fd4ee5",
+      "expected_text": "|Φd⟩=vec(I)/√d"
+    },
+    {
+      "path": "science/dimension-lower-bound.md",
+      "index": 37,
+      "source_sha256": "e345bf5571c7c6b3d05a731937ac5b28e76656780ed072b32b77c7b6b372901c",
+      "expected_text": "0<c≤1"
     }
   ]
 }

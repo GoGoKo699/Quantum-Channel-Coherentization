@@ -91,7 +91,7 @@ Thus constant-time, constant-error coherent evolution of the unnormalized Hermit
 
 ## A constant-normalization block is already sufficient
 
-The same conclusion holds for the block-encoding output used by spectral algorithms. Fix a known constant $`0<c\le1`$. For each unital channel let $`W_{\mathcal E}`$ be any unitary whose designated ancilla block is exactly
+The same conclusion holds for the block-encoding output used by spectral algorithms. Fix a known constant $`0\lt c\le1`$. For each unital channel let $`W_{\mathcal E}`$ be any unitary whose designated ancilla block is exactly
 
 ```math
 (\langle0^a|\otimes I)W_{\mathcal E}(|0^a\rangle\otimes I)

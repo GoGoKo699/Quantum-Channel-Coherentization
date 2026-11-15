@@ -37,7 +37,7 @@ The explicit formula is the convention: software that flattens a matrix into a c
 | Object | Watrous | This project |
 | --- | --- | --- |
 | Natural/Liouville representation | $`K(\mathcal E)\mathrm{vec}(X)=\mathrm{vec}(\mathcal E(X))`$ | $`L_{\mathcal E}=K(\mathcal E)`$ |
-| Entangled vector | $`\mathrm{vec}(I)`$, of squared norm $`d`$ | $`|\Phi_d\rangle=\mathrm{vec}(I)/\sqrt d`$ |
+| Entangled vector | $`\mathrm{vec}(I)`$, of squared norm $`d`$ | $`\lvert\Phi_d\rangle=\mathrm{vec}(I)/\sqrt d`$ |
 | Choi operator/state | $`J(\mathcal E)=(\mathcal E\otimes\mathrm{id})(\mathrm{vec}(I)\mathrm{vec}(I)^\dagger)`$ | $`J_{\mathcal E}=J(\mathcal E)/d`$ |
 | Tensor legs of the Choi object | Output first, input second | The same |
 
