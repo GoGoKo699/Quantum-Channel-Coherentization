@@ -35,7 +35,7 @@
       "path": "learning/WATROUS_BRIDGE.md",
       "index": 11,
       "source_sha256": "ad478d64f78d2d7c25a9ae14dbb047bf85bbfb132119703336cc4fb4f9fd4ee5",
-      "expected_text": "|Φd⟩=vec(I)/√d"
+      "expected_text": "|Φd⟩=vec(I)/d"
     },
     {
       "path": "science/dimension-lower-bound.md",
