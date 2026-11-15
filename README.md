@@ -56,6 +56,10 @@ With the additional promise of a known depolarizing probability below one, the s
 
 The [science guide](science/README.md) connects the proof dependencies, and [llms.txt](llms.txt) maps reader intentions to the same authoritative files.
 
+## Learn the project
+
+The [learning guide](learning/README.md) starts from a physical channel and follows the mechanism to the dimension frontier. Its single educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [source bridge](learning/WATROUS_BRIDGE.md) translates the book’s conventions and identifies the research ingredients supplied here. The [30-milestone map](learning/MILESTONES.md) connects background objects to the complete contribution; it is a common understanding map rather than a record of a reader’s progress.
+
 ## Reproduce the finite checks
 
 ```bash
