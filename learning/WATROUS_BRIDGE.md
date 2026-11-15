@@ -49,7 +49,7 @@ For a trace-preserving map, the book's Choi operator has trace $`d`$; the projec
 \!\left[J_{\mathcal E}(I_{\mathrm{output}}\otimes X^{\mathsf T})\right].
 ```
 
-Trace preservation gives $`\mathrm{Tr}_{\mathrm{output}}J_{\mathcal E}=I/d`$. Unitality gives the other marginal, $`\mathrm{Tr}_{\mathrm{input}}J_{\mathcal E}=I/d`$. Both identities enter the compiler's second-moment calculation. Theorem 4.27 gives $`\VertL_{\mathcal E}\Vert_\infty=1`$ for a unital channel; this is the spectral norm of its matrix, corresponding to the induced Hilbert–Schmidt norm on operators, rather than the trace norm of its Choi state.
+Trace preservation gives $`\mathrm{Tr}_{\mathrm{output}}J_{\mathcal E}=I/d`$. Unitality gives the other marginal, $`\mathrm{Tr}_{\mathrm{input}}J_{\mathcal E}=I/d`$. Both identities enter the compiler's second-moment calculation. Theorem 4.27 gives $`\Vert L_{\mathcal E}\Vert_\infty=1`$ for a unital channel; this is the spectral norm of its matrix, corresponding to the induced Hilbert–Schmidt norm on operators, rather than the trace norm of its Choi state.
 
 ### Distance and fidelity
 

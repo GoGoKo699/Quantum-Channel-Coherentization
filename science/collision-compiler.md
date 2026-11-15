@@ -46,7 +46,7 @@ The partial-trace expressions agree with sandwiching $`V`$ or $`V^2`$ by $`\rho^
 =\mathrm{Tr}_{\mathrm{prog}}
 \left[e^{-ihV}(\rho\otimes X)e^{ihV}\right],
 \qquad
-v=\VertM-K^2\Vert_\infty.
+v=\Vert M-K^2\Vert_\infty.
 ```
 
 For every real $`h`$,
@@ -63,7 +63,7 @@ W^\dagger VW=K,
 \qquad
 W^\dagger V^2W=M,
 \qquad
-\VertQVW\Vert_\infty^2=v.
+\Vert QVW\Vert_\infty^2=v.
 ```
 
 It is enough to take $`h\ge0`$; changing $`V`$ to $`-V`$ handles negative time. Put
@@ -79,7 +79,7 @@ The projected Schrödinger equations and variation of constants give
 ```math
 B_s=-i\int_0^s e^{-i(s-r)QVQ}QVWA_r\,dr,
 \qquad
-\VertB_s\Vert_\infty\le s\sqrt v,
+\Vert B_s\Vert_\infty\le s\sqrt v,
 ```
 
 because $`A_r`$ is a compression of a unitary and is a contraction. The equation for $`A_s`$ then gives
@@ -88,7 +88,7 @@ because $`A_r`$ is a compression of a unitary and is a contraction. The equation
 A_h-e^{-ihK}
 =-i\int_0^h e^{-i(h-r)K}W^\dagger VQB_r\,dr,
 \qquad
-\VertA_h-e^{-ihK}\Vert_\infty\le\frac{h^2v}{2}.
+\Vert A_h-e^{-ihK}\Vert_\infty\le\frac{h^2v}{2}.
 ```
 
 In a basis of the enlarged environment beginning with $`|s\rangle`$, tracing out that environment removes the cross terms between $`P`$ and $`Q`$. Thus
@@ -99,7 +99,7 @@ In a basis of the enlarged environment beginning with $`|s\rangle`$, tracing out
 \mathcal B_h(X)=\mathrm{Tr}_{\mathrm{env}}[B_hXB_h^\dagger].
 ```
 
-The leakage map $`\mathcal B_h`$ is completely positive, so $`\Vert\mathcal B_h\Vert_\diamond=\VertB_h^\dagger B_h\Vert_\infty\le h^2v`$. The compressed term differs from $`\mathrm{Ad}_{e^{-ihK}}`$ by at most $`(\VertA_h\Vert_\infty+1)\VertA_h-e^{-ihK}\Vert_\infty\le h^2v`$ in diamond norm. These product bounds remain valid after adjoining an arbitrary reference. Adding the two contributions proves the lemma for all real $`h`$.
+The leakage map $`\mathcal B_h`$ is completely positive, so $`\Vert\mathcal B_h\Vert_\diamond=\Vert B_h^\dagger B_h\Vert_\infty\le h^2v`$. The compressed term differs from $`\mathrm{Ad}_{e^{-ihK}}`$ by at most $`(\Vert A_h\Vert_\infty+1)\Vert A_h-e^{-ihK}\Vert_\infty\le h^2v`$ in diamond norm. These product bounds remain valid after adjoining an arbitrary reference. Adding the two contributions proves the lemma for all real $`h`$.
 
 ## Programs and their first moments
 
@@ -184,7 +184,7 @@ M_\pm
 =I_{A'B'}.
 ```
 
-It follows that $`v_\pm=\VertI-K_\pm^2\Vert_\infty\le1`$. The inherited variance lemma now gives the uniform local guarantee
+It follows that $`v_\pm=\Vert I-K_\pm^2\Vert_\infty\le1`$. The inherited variance lemma now gives the uniform local guarantee
 
 ```math
 \Vert\mathcal C_{\rho_\pm,h}
@@ -194,7 +194,7 @@ It follows that $`v_\pm=\VertI-K_\pm^2\Vert_\infty\le1`$. The inherited variance
 
 for every real step $`h`$. Replacing this evaluated moment by a worst-case interaction bound would discard the flat-marginal information.
 
-For the product-formula constant, we also use $`\VertK_\pm\Vert_\infty\le1/d`$. Here is a direct reason. For any bipartite state $`\rho_{AB}`$, the maps $`X\mapsto\mathrm{Tr}(X)I\pm X^T`$ are completely positive because their Choi matrices are $`I\pm F`$. Applying either map on $`A`$ to the positive matrix $`\rho^{T_{AB}}`$ proves
+For the product-formula constant, we also use $`\Vert K_\pm\Vert_\infty\le1/d`$. Here is a direct reason. For any bipartite state $`\rho_{AB}`$, the maps $`X\mapsto\mathrm{Tr}(X)I\pm X^T`$ are completely positive because their Choi matrices are $`I\pm F`$. Applying either map on $`A`$ to the positive matrix $`\rho^{T_{AB}}`$ proves
 
 ```math
 -I_A\otimes\rho_B^T
@@ -218,7 +218,7 @@ Its ideal product is the unitary channel of $`e^{ihK_-}e^{-ihK_+}`$. Channel com
 For Hermitian $`A,B`$, the first-order unitary product formula obeys
 
 ```math
-\Verte^{-ihA}e^{-ihB}-e^{-ih(A+B)}\Vert_\infty
+\Vert e^{-ihA}e^{-ihB}-e^{-ih(A+B)}\Vert_\infty
 \le\frac{h^2}{2}\Vert[A,B]\Vert_\infty.
 ```
 
@@ -226,7 +226,7 @@ This follows by differentiating an interpolating product and integrating the com
 
 ```math
 \Vert[K_+,K_-]\Vert_\infty
-\le2\VertK_+\Vert_\infty\VertK_-\Vert_\infty
+\le2\Vert K_+\Vert_\infty\Vert K_-\Vert_\infty
 \le2/d^2.
 ```
 
