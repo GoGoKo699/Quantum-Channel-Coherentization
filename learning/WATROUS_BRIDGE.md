@@ -21,11 +21,11 @@ These are targeted entry points. Later sections on capacities, entropy, and enta
 
 ### Vectorization and the two representations
 
-Watrous uses $`\operatorname{vec}(E_{ij})=|i\rangle\otimes|j\rangle`$. This project uses exactly that tensor convention:
+Watrous uses $`\mathrm{vec}(E_{ij})=|i\rangle\otimes|j\rangle`$. This project uses exactly that tensor convention:
 
 ```math
 |X\rangle\!\rangle
-=\operatorname{vec}(X)
+=\mathrm{vec}(X)
 =\sum_{i,j}X_{ij}|i\rangle|j\rangle,
 \qquad
 |AXB^\dagger\rangle\!\rangle
@@ -36,9 +36,9 @@ The explicit formula is the convention: software that flattens a matrix into a c
 
 | Object | Watrous | This project |
 | --- | --- | --- |
-| Natural/Liouville representation | $`K(\mathcal E)\operatorname{vec}(X)=\operatorname{vec}(\mathcal E(X))`$ | $`L_{\mathcal E}=K(\mathcal E)`$ |
-| Entangled vector | $`\operatorname{vec}(I)`$, of squared norm $`d`$ | $`|\Phi_d\rangle=\operatorname{vec}(I)/\sqrt d`$ |
-| Choi operator/state | $`J(\mathcal E)=(\mathcal E\otimes\mathrm{id})(\operatorname{vec}(I)\operatorname{vec}(I)^\dagger)`$ | $`J_{\mathcal E}=J(\mathcal E)/d`$ |
+| Natural/Liouville representation | $`K(\mathcal E)\mathrm{vec}(X)=\mathrm{vec}(\mathcal E(X))`$ | $`L_{\mathcal E}=K(\mathcal E)`$ |
+| Entangled vector | $`\mathrm{vec}(I)`$, of squared norm $`d`$ | $`|\Phi_d\rangle=\mathrm{vec}(I)/\sqrt d`$ |
+| Choi operator/state | $`J(\mathcal E)=(\mathcal E\otimes\mathrm{id})(\mathrm{vec}(I)\mathrm{vec}(I)^\dagger)`$ | $`J_{\mathcal E}=J(\mathcal E)/d`$ |
 | Tensor legs of the Choi object | Output first, input second | The same |
 
 For a trace-preserving map, the book's Choi operator has trace $`d`$; the project's Choi state has trace one. Thus a physical call on one half of $`|\Phi_d\rangle`$ prepares $`J_{\mathcal E}`$, with no extra factor of $`d`$. The normalized reconstruction formula is
@@ -49,16 +49,16 @@ For a trace-preserving map, the book's Choi operator has trace $`d`$; the projec
 \!\left[J_{\mathcal E}(I_{\mathrm{output}}\otimes X^{\mathsf T})\right].
 ```
 
-Trace preservation gives $`\mathrm{Tr}_{\mathrm{output}}J_{\mathcal E}=I/d`$. Unitality gives the other marginal, $`\mathrm{Tr}_{\mathrm{input}}J_{\mathcal E}=I/d`$. Both identities enter the compiler's second-moment calculation. Theorem 4.27 gives $`\|L_{\mathcal E}\|_\infty=1`$ for a unital channel; this is the spectral norm of its matrix, corresponding to the induced Hilbert–Schmidt norm on operators, rather than the trace norm of its Choi state.
+Trace preservation gives $`\mathrm{Tr}_{\mathrm{output}}J_{\mathcal E}=I/d`$. Unitality gives the other marginal, $`\mathrm{Tr}_{\mathrm{input}}J_{\mathcal E}=I/d`$. Both identities enter the compiler's second-moment calculation. Theorem 4.27 gives $`\VertL_{\mathcal E}\Vert_\infty=1`$ for a unital channel; this is the spectral norm of its matrix, corresponding to the induced Hilbert–Schmidt norm on operators, rather than the trace norm of its Choi state.
 
 ### Distance and fidelity
 
-The project's $`\|\cdot\|_\diamond`$ is Watrous's completely bounded trace norm, without a factor of one half. For states, write $`D(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1`$. Consequently a compiler guarantee of unhalved diamond error $`\delta`$ implies output trace distance at most $`\delta/2`$, even with an untouched reference. Any specified measurement probability changes by at most $`\delta/2`$.
+The project's $`\Vert\cdot\Vert_\diamond`$ is Watrous's completely bounded trace norm, without a factor of one half. For states, write $`D(\rho,\sigma)=\tfrac12\Vert\rho-\sigma\Vert_1`$. Consequently a compiler guarantee of unhalved diamond error $`\delta`$ implies output trace distance at most $`\delta/2`$, even with an untouched reference. Any specified measurement probability changes by at most $`\delta/2`$.
 
 Watrous's Definition 3.11 uses the **unsquared** fidelity
 
 ```math
-F_{\mathrm W}(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1.
+F_{\mathrm W}(\rho,\sigma)=\Vert\sqrt\rho\sqrt\sigma\Vert_1.
 ```
 
 The lower bound instead uses overlap with the pure normalized Choi state of the ideal unitary:

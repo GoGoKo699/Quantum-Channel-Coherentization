@@ -28,7 +28,7 @@ Wei, Liu, Liu, Han, Deng and Liu, *Simulating non-completely positive actions vi
 Their general sample bound uses the norm of the joint interaction. Appendix C2 goes further for partial transposition: Proposition 3 improves the bound to $`O(d_A t^2/\epsilon)`$, and Eq. (C17) explicitly retains
 
 ```math
-d_A\|\operatorname{Tr}_B\rho\|_\infty
+d_A\Vert\mathrm{Tr}_B\rho\Vert_\infty
 ```
 
 before bounding it by $`d_A`$. Their convolution inequality and parity analysis already exhibit the relevance of reduced program states. The present account therefore credits marginal-sensitive exponentiation to this prior work; it does not introduce that observation as a new principle.
@@ -36,10 +36,10 @@ before bounding it by $`d_A`$. Their convolution inequality and parity analysis 
 The all-time collision estimate used here is also inherited. The public proof in [*Collective Quantum Programming*, `science/collision_bound.md`, revision `0fefb607599f9c864918ed1ab58a778fe5b50cf1`](https://github.com/GoGoKo699/Collective-Quantum-Programming/blob/0fefb607599f9c864918ed1ab58a778fe5b50cf1/science/collision_bound.md) establishes
 
 ```math
-\|\Phi_\tau-\operatorname{Ad}_{e^{-i\tau h}}\|_\diamond
+\Vert\Phi_\tau-\mathrm{Ad}_{e^{-i\tau h}}\Vert_\diamond
 \le2\tau^2
-\left\|\mathcal E_\sigma(V^2)
--\mathcal E_\sigma(V)^2\right\|_\infty,
+\left\Vert\mathcal E_\sigma(V^2)
+-\mathcal E_\sigma(V)^2\right\Vert_\infty,
 \qquad h=\mathcal E_\sigma(V),
 ```
 

@@ -21,8 +21,8 @@ For every unital channel $`\mathcal E`$ on $`\mathbb C^d`$ and every $`0<\delta\
 (\langle0^a|\otimes I)V_{\mathcal E}
 (|0^a\rangle\otimes I)=A,
 \qquad
-\left\|\widetilde{\mathcal V}_{\mathcal E}
--\operatorname{Ad}_{V_{\mathcal E}}\right\|_\diamond
+\left\Vert\widetilde{\mathcal V}_{\mathcal E}
+-\mathrm{Ad}_{V_{\mathcal E}}\right\Vert_\diamond
 \le\delta.
 ```
 
@@ -39,7 +39,7 @@ The physical implementation additionally uses one disposable Choi-based program 
 
 ## An exact sine block
 
-Unitality gives $`\|H_0\|_\infty\le1/2`$. Define
+Unitality gives $`\VertH_0\Vert_\infty\le1/2`$. Define
 
 ```math
 U=e^{-iH_0},
@@ -106,10 +106,10 @@ Real-polynomial singular value transformation, Corollary 18 of that work, applie
 B=P_m(\sin H_0).
 ```
 
-For a Hermitian input and an odd polynomial, singular value transformation agrees with the Hermitian polynomial functional calculus. Thus $`B`$ is Hermitian and commutes with $`H_0`$ and $`A`$. Since $`\|\sin H_0\|\le\sin(1/2)<1/2`$ and $`\arcsin(\sin H_0)=H_0`$,
+For a Hermitian input and an odd polynomial, singular value transformation agrees with the Hermitian polynomial functional calculus. Thus $`B`$ is Hermitian and commutes with $`H_0`$ and $`A`$. Since $`\Vert\sin H_0\Vert\le\sin(1/2)<1/2`$ and $`\arcsin(\sin H_0)=H_0`$,
 
 ```math
-\|B-A\|_\infty\le\zeta.
+\VertB-A\Vert_\infty\le\zeta.
 ```
 
 There is also a useful strict contraction bound. For $`0\le h\le1/2`$, positivity of the Taylor coefficients gives
@@ -120,7 +120,7 @@ There is also a useful strict contraction bound. For $`0\le h\le1/2`$, positivit
 =\frac2\pi h.
 ```
 
-Oddness handles negative $`h`$. Consequently $`\|A\|_\infty,\|B\|_\infty\le1/\pi<1/2`$. The ideal QSVT circuit uses $`O(q)`$ occurrences of controlled $`U`$ and its inverse, together with known operations.
+Oddness handles negative $`h`$. Consequently $`\VertA\Vert_\infty,\VertB\Vert_\infty\le1/\pi<1/2`$. The ideal QSVT circuit uses $`O(q)`$ occurrences of controlled $`U`$ and its inverse, together with known operations.
 
 ## Stable completion of the whole unitary
 
@@ -133,7 +133,7 @@ V=\begin{pmatrix}B&C\\D&E\end{pmatrix}
 \quad\text{on }\mathcal D\oplus\mathcal K.
 ```
 
-Put $`S_B=\sqrt{I-B^2}`$. It is invertible because $`\|B\|<1`$. The unitary relations imply
+Put $`S_B=\sqrt{I-B^2}`$. It is invertible because $`\VertB\Vert<1`$. The unitary relations imply
 
 ```math
 CC^\dagger=S_B^2,
@@ -170,12 +170,12 @@ The operator $`V_A`$ is unitary and its designated block is exactly $`A`$. Since
 
 ```math
 \begin{aligned}
-\|V_A-V\|_\infty
-&=\|J_A-J_B\|_\infty\\
-&\le\max_{(a,b)\in\operatorname{joint\,spec}(A,B)}
+\VertV_A-V\Vert_\infty
+&=\VertJ_A-J_B\Vert_\infty\\
+&\le\max_{(a,b)\in\mathrm{joint\,spec}(A,B)}
 \sqrt{(a-b)^2+
 \left(\sqrt{1-a^2}-\sqrt{1-b^2}\right)^2}\\
-&\le\frac2{\sqrt3}\|A-B\|_\infty
+&\le\frac2{\sqrt3}\VertA-B\Vert_\infty
 <2\zeta.
 \end{aligned}
 ```
@@ -183,15 +183,15 @@ The operator $`V_A`$ is unitary and its designated block is exactly $`A`$. Since
 For any two unitaries $`W_1,W_2`$, adjoining an arbitrary reference and expanding the two conjugations gives
 
 ```math
-\|\operatorname{Ad}_{W_1}-\operatorname{Ad}_{W_2}\|_\diamond
-\le2\|W_1-W_2\|_\infty.
+\Vert\mathrm{Ad}_{W_1}-\mathrm{Ad}_{W_2}\Vert_\diamond
+\le2\VertW_1-W_2\Vert_\infty.
 ```
 
 Apply this completion to $`V=V_P`$ and denote the resulting $`V_A`$ by $`V_{\mathcal E}`$. It follows that
 
 ```math
-\|\operatorname{Ad}_{V_P}
--\operatorname{Ad}_{V_{\mathcal E}}\|_\diamond
+\Vert\mathrm{Ad}_{V_P}
+-\mathrm{Ad}_{V_{\mathcal E}}\Vert_\diamond
 \le4\zeta=\delta/2.
 ```
 
@@ -208,8 +208,8 @@ Let $`r\le c_0q`$ be the number of controlled-evolution primitives in a fixed QS
 The collision compiler at time $`1/2`$, with any needed extra controls, uses $`O(d^2/\eta)`$ ordinary calls per primitive. Contractivity and telescoping over the $`r`$ occurrences give
 
 ```math
-\|\widetilde{\mathcal V}_{\mathcal E}
--\operatorname{Ad}_{V_P}\|_\diamond
+\Vert\widetilde{\mathcal V}_{\mathcal E}
+-\mathrm{Ad}_{V_P}\Vert_\diamond
 \le r\eta\le\delta/2.
 ```
 
@@ -226,20 +226,20 @@ The programs are prepared using unconditional calls to $`\mathcal E`$. Coherent 
 
 ## Inverse and controlled versions
 
-Reverse the ideal QSVT circuit and replace every ideal controlled evolution by the inverse-time collision construction. This produces a physical channel close to $`\operatorname{Ad}_{V_P^\dagger}`$ with the same error and query bounds. The same stable completion already fixed $`V_{\mathcal E}`$, and
+Reverse the ideal QSVT circuit and replace every ideal controlled evolution by the inverse-time collision construction. This produces a physical channel close to $`\mathrm{Ad}_{V_P^\dagger}`$ with the same error and query bounds. The same stable completion already fixed $`V_{\mathcal E}`$, and
 
 ```math
-\|V_P^\dagger-V_{\mathcal E}^\dagger\|_\infty
-=\|V_P-V_{\mathcal E}\|_\infty.
+\VertV_P^\dagger-V_{\mathcal E}^\dagger\Vert_\infty
+=\VertV_P-V_{\mathcal E}\Vert_\infty.
 ```
 
-Therefore the inverse implementation is $`\delta`$-close to $`\operatorname{Ad}_{V_{\mathcal E}^\dagger}`$ for that same exact comparison unitary.
+Therefore the inverse implementation is $`\delta`$-close to $`\mathrm{Ad}_{V_{\mathcal E}^\dagger}`$ for that same exact comparison unitary.
 
 Likewise, coherently control the known ideal QSVT sequence and its constituent compiled evolutions. Since
 
 ```math
-\|C_{V_P}-C_{V_{\mathcal E}}\|_\infty
-=\|V_P-V_{\mathcal E}\|_\infty,
+\VertC_{V_P}-C_{V_{\mathcal E}}\Vert_\infty
+=\VertV_P-V_{\mathcal E}\Vert_\infty,
 ```
 
 the resulting channel is $`\delta`$-close to the controlled version of the same $`V_{\mathcal E}`$. These controls and inverses are output capabilities of the compiler. They do not assert that an arbitrary approximate physical channel can be inverted or controlled after the fact.

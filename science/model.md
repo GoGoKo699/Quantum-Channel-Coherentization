@@ -63,14 +63,14 @@ U_{\mathcal E}(t)=e^{-it\mathsf H(L_{\mathcal E})},
 
 There is no factor $`1/2`$, $`1/d`$, or hidden block normalization in this definition. The flag and the two vectorization registers have total dimension $`2d^2`$. The output must work on arbitrary data inputs, including inputs entangled with an untouched reference system.
 
-For a unital channel, $`\|L_{\mathcal E}\|_\infty=1`$. Indeed, the Schwarz inequality for unital completely positive maps gives
+For a unital channel, $`\VertL_{\mathcal E}\Vert_\infty=1`$. Indeed, the Schwarz inequality for unital completely positive maps gives
 
 ```math
 \mathcal E(X)^\dagger\mathcal E(X)
 \preceq\mathcal E(X^\dagger X).
 ```
 
-Taking the trace and using trace preservation proves Hilbert-Schmidt contraction, so $`\|L_{\mathcal E}\|_\infty\le1`$. The fixed vector $`|I\rangle\!\rangle`$ gives equality. Consequently $`\|\mathsf H(L_{\mathcal E})\|_\infty=1`$. This explains why the unnormalized target already has a dimension-independent Hamiltonian norm in the present class.
+Taking the trace and using trace preservation proves Hilbert-Schmidt contraction, so $`\VertL_{\mathcal E}\Vert_\infty\le1`$. The fixed vector $`|I\rangle\!\rangle`$ gives equality. Consequently $`\Vert\mathsf H(L_{\mathcal E})\Vert_\infty=1`$. This explains why the unnormalized target already has a dimension-independent Hamiltonian norm in the present class.
 
 ## Access and charged resources
 
@@ -85,12 +85,12 @@ The primary resource bound counts ordinary channel calls. Preparing the known en
 All diamond distances are **unhalved**. For a linear map $`\Lambda`$,
 
 ```math
-\|\Lambda\|_\diamond
+\Vert\Lambda\Vert_\diamond
 =\sup_{r\ge1}\sup_{X\ne0}
-\frac{\|(\Lambda\otimes\mathrm{id}_r)(X)\|_1}{\|X\|_1}.
+\frac{\Vert(\Lambda\otimes\mathrm{id}_r)(X)\Vert_1}{\VertX\Vert_1}.
 ```
 
-In particular, the diamond distance between two channels is at most $`2`$. The compiler's guarantee is $`\|\widetilde{\mathcal U}_{\mathcal E,t}-\mathcal U_{\mathcal E,t}\|_\diamond\le\epsilon`$, with this convention. It is a uniform channel guarantee, rather than a bound for one chosen input or one observable.
+In particular, the diamond distance between two channels is at most $`2`$. The compiler's guarantee is $`\Vert\widetilde{\mathcal U}_{\mathcal E,t}-\mathcal U_{\mathcal E,t}\Vert_\diamond\le\epsilon`$, with this convention. It is a uniform channel guarantee, rather than a bound for one chosen input or one observable.
 
 ## Relation to the existing construction
 
